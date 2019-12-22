@@ -1,30 +1,30 @@
 #mobile-sidebar
   #menu_mask
   #mobile-sidebar-menus
-    .mobile_author_icon
-      img.lazyload.avatar_img(src=url_for(theme.avatar) onerror=`onerror=null;src='${theme.lodding_bg.flink}'`)
-    .mobile_post_data
-      if site.posts.length
-        .mobile_data_item.is_center
-          .mobile_data_link
-            a(href=url_for(config.archive_dir) + '/')
-              .headline= _p('aside.articles') 
-              .length_num= site.posts.length
+    //- .mobile_author_icon
+      //- img.lazyload.avatar_img(src=url_for(theme.avatar) onerror=`onerror=null;src='${theme.lodding_bg.flink}'`)
+    //- .mobile_post_data
+    //-   if site.posts.length
+    //-     .mobile_data_item.is_center
+    //-       .mobile_data_link
+    //-         a(href=url_for(config.archive_dir) + '/')
+    //-           .headline= _p('aside.articles') 
+    //-           .length_num= site.posts.length
 
-      if site.tags.length
-        .mobile_data_item.is_center       
-          .mobile_data_link
-            a(href=url_for(config.tag_dir) + '/' )
-              .headline= _p('aside.tags')
-              .length_num= site.tags.length
+    //-   if site.tags.length
+    //-     .mobile_data_item.is_center       
+    //-       .mobile_data_link
+    //-         a(href=url_for(config.tag_dir) + '/' )
+    //-           .headline= _p('aside.tags')
+    //-           .length_num= site.tags.length
 
-      if site.categories.length
-        .mobile_data_item.is_center      
-          .mobile_data_link
-            a(href=url_for(config.category_dir) + '/')
-              .headline= _p('aside.categories') 
-              .length_num= site.categories.length
-    hr
+    //-   if site.categories.length
+    //-     .mobile_data_item.is_center      
+    //-       .mobile_data_link
+    //-         a(href=url_for(config.category_dir) + '/')
+    //-           .headline= _p('aside.categories') 
+    //-           .length_num= site.categories.length
+    //- hr
     .menus_items
       include menu_item.pug
 
